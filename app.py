@@ -199,13 +199,14 @@ def app_object_detection():
             return image, result
 
         def recv(self, frame: av.VideoFrame) -> av.VideoFrame:
-            st.image(frame)
+          
             image = frame.to_ndarray(format="bgr24")
             blob = cv2.dnn.blobFromImage(
                 cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5
             )
             self._net.setInput(blob)
             detections = self._net.forward()
+            st.image(image)
             annotated_image, result = self._annotate_image(image, detections)
 
             # NOTE: This `recv` method is called in another thread,
