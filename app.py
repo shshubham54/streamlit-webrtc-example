@@ -287,12 +287,12 @@ def app_sendonly_video():
 
             img_rgb = video_frame.to_ndarray(format="rgb24")
             image_place.image(img_rgb)
-            st.image(image_place)
             pic_captured=1
         else:
             logger.warning("AudioReciver is not set. Abort.")
             break
-
+    st.text("Hi")
+    st.image(image_place)
 
 if __name__ == "__main__":
     import os
