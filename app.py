@@ -89,10 +89,14 @@ def main():
     st.header("WebRTC demo")
 
     object_detection_page = "Real time object detection (sendrecv)"
-        app_mode = st.sidebar.selectbox(
+    video_sendonly_page = (
+        "WebRTC is sendonly and images are shown via st.image() (sendonly)"
+    )
+    app_mode = st.sidebar.selectbox(
         "Choose the app mode",
         [
             object_detection_page,
+            video_sendonly_page,
         ],
     )
     st.subheader(app_mode)
