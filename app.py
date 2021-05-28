@@ -6,6 +6,7 @@ import threading
 import urllib.request
 from pathlib import Path
 from typing import List, NamedTuple
+from PIL import Image
 
 try:
     from typing import Literal
