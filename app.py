@@ -277,7 +277,7 @@ def app_sendonly_video():
 
     image_place = st.empty()
 
-    while True:
+    while (!image_place):
         if webrtc_ctx.video_receiver:
             try:
                 video_frame = webrtc_ctx.video_receiver.get_frame(timeout=1)
