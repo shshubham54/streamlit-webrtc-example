@@ -291,8 +291,9 @@ def app_sendonly_video():
         else:
             logger.warning("AudioReciver is not set. Abort.")
             break
-    st.text("Hi")
-    st.image(image_place)
+    our_image = Image.open(image_place)
+    st.text("Original Image")
+    st.image(our_image)
 
 if __name__ == "__main__":
     import os
