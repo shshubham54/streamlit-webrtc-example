@@ -221,9 +221,6 @@ def app_object_detection():
         async_processing=True,
     )
 
-
-    )
-
     if st.checkbox("Show the detected labels", value=True):
         if webrtc_ctx.state.playing:
             labels_placeholder = st.empty()
